@@ -2,11 +2,8 @@ const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 const themeBtn = document.getElementById("themeBtn");
 
-/* Always start in light mode.
-   No previous theme is remembered. */
 document.body.classList.remove("dark");
 
-/* Mobile menu */
 menuBtn.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 
@@ -17,7 +14,7 @@ menuBtn.addEventListener("click", function () {
     }
 });
 
-/* Close menu after clicking a link */
+/* Close menu*/
 document.querySelectorAll(".nav-menu a").forEach(function (link) {
     link.addEventListener("click", function () {
         navMenu.classList.remove("active");
@@ -25,7 +22,7 @@ document.querySelectorAll(".nav-menu a").forEach(function (link) {
     });
 });
 
-/* Theme change - only for the current page visit */
+/* Theme change */
 themeBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark");
 });
